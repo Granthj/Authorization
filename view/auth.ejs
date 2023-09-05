@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <centre>
+        <h1>This is Information Page</h1>
+    <% if(user.length > 0 && Authentication) { %>
+    <% for(let arr of user) { %>
+        <h1>Your First Name is:<%=arr.fname%></h1>
+        <h1>And Last Name is:<%=arr.lname%></h1>
+        <h1>Contact:<%=arr.contact%></h1>
+   <% } %>
+   <% } else { %>
+    <h1>No User</h1>
+  <% } %>
+</centre>
+</body>
+</html>
